@@ -63,11 +63,12 @@ body {
 /* ------------------------------------MOBILE-------------------------------- */
 
 header {
+    width: 320px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 26px 28px 30px 28px;
+    margin: 26px auto 30px auto;
 }
 
 header h1 {
