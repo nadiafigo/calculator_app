@@ -15,10 +15,13 @@
     --1_Toggle-Keypad-Background: hsl(223, 31%, 20%);
     --1_ScreenBackground: hsl(224, 36%, 15%);
     --1_Special-Key-Background: hsl(225, 21%, 49%);
+    --1_Active-Special-Key: hsl(224, 19%, 54%);
     --1_Special-Key-Shadow: hsl(224, 28%, 35%);
     --1_Toggle_Equal-Key:hsl(6, 63%, 50%);
+    --1_Active-Equal-Key: hsl(6, 55%, 55%);
     --1_Equal-Key-Shadow: hsl(6, 70%, 34%);
     --1_Key-Background: hsl(30, 25%, 89%);
+    --1_Active-Key: hsl(30, 10%, 92%);
     --1_Key-Shadow: hsl(28, 16%, 65%);
     --1_Key-Text: hsl(221, 14%, 31%);
 
@@ -55,6 +58,9 @@ body {
     font-family: "League Spartan", sans-serif;
     background-color: var(--1_Main-Background);
 }
+
+
+/* ------------------------------------MOBILE-------------------------------- */
 
 header {
     display: flex;
@@ -135,8 +141,14 @@ header h1 {
     background-color: var(--1_ScreenBackground);
     width: 320px;
     height: 88px;
+    padding: 25px;
     border-radius: 10px;
+    color: white;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: right;
 }
+
 
 .keypad {
     margin-top: 25px;
@@ -206,13 +218,36 @@ button {
     font-size: 18px;
 }
 
+/* --------------------Active States----------------------- */
 
+.key:active {
+    cursor: pointer;
+    background-color: var(--1_Active-Key);
+    box-shadow: inset 0 5px 0 0 var(--1_Toggle-Keypad-Background);
+    border: none;
+    font-size: 24px;
+}
 
+.spe-key:active {
+    cursor: pointer;
+    background-color: var(--1_Active-Special-Key);
+    box-shadow: inset 0 5px 0 0 var(--1_Toggle-Keypad-Background);
+    border: none;
+    font-size: 16px;
+}
 
+.equal-key:active {
+    cursor: pointer;
+    background-color: var(--1_Active-Equal-Key);
+    box-shadow: inset 0 5px 0 0 var(--1_Toggle-Keypad-Background);
+    border: none;
+    font-size: 16px;
+}
 
-
-
-
+.selected:active {
+    cursor: pointer;
+    background-color: var(--1_Active-Equal-Key);
+}
 
 
 .attribution {
@@ -222,9 +257,62 @@ button {
 }
 
 .attribution p {
-    color: white;
+    color: var(--1_Key-Background);
 }
 
 .attribution a {
+    color: var(--1_Key-Background) ;
+}
+
+.attribution a:active {
     color: var(--1_Toggle_Equal-Key) ;
+}
+
+
+/* -----------------------------------DESKTOP-------------------------------- */
+
+@media (min-width: 1300px) {
+
+    header {
+        width: 500px;
+        margin: 20px auto 30px auto;
+    }
+
+    .screen {
+        background-color: var(--1_ScreenBackground);
+        width: 500px;
+        height: 120px;
+        padding: 35px;
+        font-size: 50px;
+    }
+    
+    .keypad {
+        width: 500px;
+    }
+
+
+    .attribution {
+        font-size: 18px;
+        text-align: center;
+        margin-top: 30px;
+    }
+    
+    .attribution p {
+        color: var(--1_Key-Background);
+    }
+    
+    .attribution a {
+        color: var(--1_Key-Background);
+    }
+
+    .attribution a:hover {
+        cursor: pointer;
+        color: var(--1_Toggle_Equal-Key)
+    }
+
+
+
+
+
+
 }
