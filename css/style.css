@@ -71,7 +71,7 @@ header {
     margin: 26px auto 30px auto;
 }
 
-header h1 {
+header {
     color: white;
 }
 
@@ -81,9 +81,8 @@ header h1 {
 }
 
 .theme-number {
-    color: white;
     font-size: 12px;
-    font-weight: 400;
+    font-weight: 700;
     height: 22px;
     display: flex;
     flex-direction: row;
@@ -109,7 +108,7 @@ header h1 {
     width: 14px;
     border-radius: 7px;
     opacity: 0;
-    /* transition: 0.2s ease; */
+    transition: 0.2s ease;
 }
 
 .switch input:hover {
@@ -126,8 +125,7 @@ header h1 {
     position: absolute;
     margin-right: 150px;
     font-size: 12px;
-    font-weight: 400;
-    color: white;
+    font-weight: 700;
     letter-spacing: 2px;
 }
 
@@ -254,7 +252,7 @@ button {
 .attribution {
     font-size: 12px;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .attribution p {
@@ -265,7 +263,7 @@ button {
     color: var(--1_Key-Background) ;
 }
 
-.attribution a:active {
+.attribution a:hover {
     color: var(--1_Toggle_Equal-Key) ;
 }
 
