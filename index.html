@@ -29,36 +29,37 @@
   </header>
 
   <div class="calculator-container">
-    <div class="screen"></div>
+    <div data-previous-operand class="previous-data"></div>
+    <div data-current-operand class="screen" id="output"></div>
 
     <div class="keypad">
       <div class="key-row">
-        <button class="key">7</button>
-        <button class="key">8</button>
-        <button class="key">9</button>
-        <button class="spe-key del-key">del</button>
+        <button data-number class="key">7</button>
+        <button data-number class="key">8</button>
+        <button data-number class="key">9</button>
+        <button data-delete class="spe-key del-key">del</button>
       </div>
       <div class="key-row">
-        <button class="key">4</button>
-        <button class="key">5</button>
-        <button class="key">6</button>
-        <button class="key">+</button>
+        <button data-number class="key">4</button>
+        <button data-number class="key">5</button>
+        <button data-number class="key">6</button>
+        <button data-operation class="key">+</button>
       </div>
       <div class="key-row">
-        <button class="key">1</button>
-        <button class="key">2</button>
-        <button class="key">3</button>
-        <button class="key">-</button>
+        <button data-number class="key">1</button>
+        <button data-number class="key">2</button>
+        <button data-number class="key">3</button>
+        <button data-operation class="key">-</button>
       </div>
       <div class="key-row">
-        <button class="key">.</button>
-        <button class="key">0</button>
-        <button class="key">/</button>
-        <button class="key">x</button>
+        <button data-number class="key">.</button>
+        <button data-number class="key">0</button>
+        <button data-operation class="key">/</button>
+        <button data-operation class="key">x</button>
       </div>
       <div class="key-row-b">
-        <button class="spe-key reset-key">reset</button>
-        <button class="equal-key">=</button>
+        <button data-reset class="spe-key reset-key">reset</button>
+        <button data-equal class="equal-key">=</button>
       </div>
     </div>
   </div>  <!-- calculator-container -->
